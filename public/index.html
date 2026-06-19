@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Coop V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div id="menu">
+        <h1>Cyberbullet Arena</h1>
+
+        <div class="panel">
+            <button id="createBtn">Criar Sala</button>
+
+            <div class="joinBox">
+                <input id="roomCode" maxlength="4" placeholder="CÓDIGO">
+                <button id="joinBtn">Entrar</button>
+            </div>
+
+            <div id="message"></div>
+        </div>
+    </div>
+
+
+    <div id="lobby" class="hidden">
+        <h2>Lobby</h2>
+        <div id="lobbyCode">Código:</div>
+        <div id="hostInfo">Host:</div>
+        <div id="playerList"></div>
+
+        <div class="buttons">
+            <button id="readyBtn">Pronto</button>
+            <button id="startBtn">Iniciar Partida</button>
+        </div>
+    </div>
+
+
+    <div id="hud" class="hidden">
+        <div id="wave">Onda 1</div>
+        <div id="score">Pontos: 0</div>
+
+        <div id="bossBarContainer" class="hidden">
+            <div id="bossText">BOSS</div>
+            <div id="bossBarBg">
+                <div id="bossBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOver" class="hidden">
+        <h1 id="gameOverText">GAME OVER</h1>
+        <button onclick="returnToMenu()">
+          Voltar ao Menu
+        </button>
+    </div>
+
+
+    <canvas id="game" class="hidden"></canvas>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
